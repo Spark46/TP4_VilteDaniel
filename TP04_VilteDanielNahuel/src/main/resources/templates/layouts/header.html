@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	</head>
+	<body>
+		<!-- HEADER -->
+		<section class="row m-4" data-th-fragment="header">
+			<div class="col-6 col-sm-6 col-md-12">
+			<header class="blue">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 align-items-center">
+						<div class="container" style="background:white">
+							<img src="../img/fiunju.jpg" class="img-fluid mx-auto d-block max-width:50%">
+						</div>
+					</div>
+					<section class="d-none d-md-block col-md-8 justify-content-center">
+						<div class="row">
+							<div class="col-8">
+								<h2>¡Universidad Publica y Gratuita! Mas de 52 Años de Educacion</h2>
+							</div>
+							<div class="col-4">
+        <div class="row d-flex justify-content-between align-items-center">
+        	<div class="col-3">
+            <a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" class="text-dark me-3" target="_blank">
+                <img src="../img/ytlog.jpg" class="img-fluid" alt="YouTube Logo" >
+            </a>
+            </div>
+            <div class="col-3">
+            <a href="https://www.facebook.com/fiunju/" class="text-dark me-3" target="_blank">
+                <img src="../img/fclog.jpg" class="img-fluid" alt="Facebook Logo" >
+            </a>
+            </div>
+            <div class="col-3">
+            <a href="https://www.instagram.com/fiunju/" class="text-dark" target="_blank">
+                <img src="../img/ig.png" class="img-fluid" alt="Instagram Logo" >
+            </a>
+            </div>
+            <div class="col-3">
+            <a href="https://www.linkedin.com/school/facultad-de-ingenieria-unju" class="text-dark" target="_blank">
+                <img src="../img/linkdlog.jpg" class="img-fluid" alt="Linkedin Logo" >
+            </a>
+            </div>
+        </div>
+    </div>
+						</div>
+					</section>
+				</div>
+			</header>
+			</div>
+			<div class="col-6 col-sm-6 col-md-12">
+				<nav class="navbar navbar-expand-lg border-bottom bg-body-tertiary justify-content-center align-items-center">
+					<div class="text-center">
+						<a class="navbar-brand text-center d-none d-md-block" href="/">Inicio</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#">Acerca De</a>
+								</li>
+								<li class="nav-item dropdown">
+									<button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+										Carreras
+									</button>
+									<ul class="dropdown-menu dropdown-menu-dark">
+										<li><a class="dropdown-item" href="#">Ingenieria en Minas</a></li>
+										<li><a class="dropdown-item" href="#">Ingenieria en Quimica</a></li>
+										<li><a class="dropdown-item" href="#">Ingenieria en Informatica</a></li>
+										<li><a class="dropdown-item" href="#">Analis Programador Universitario</a></li>
+									</ul>
+									<li class="nav-item">
+										<a class="nav-link active" aria-current="page" href="#">Noticias</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link active" aria-current="page" href="#footer">Contacto</a>
+									</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<!-- ASIDE -->
+		<aside class="col-auto" th:fragment="aside">
+			<div class="text-start">
+				<p>
+					<button class="btn btn-primary ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+					</svg>
+					</button>
+				</p>
+			</div>
+			<div style="min-height: 80px;">
+				<div class="collapse collapse-horizontal" id="collapseWidthExample">
+				<div class="card" style="width: 18rem;">
+					<div class="container mt-5">
+        <h3 class="mb-4">Links Útiles</h3>
+        <div class="list-group">
+            <a href="https://virtual.unju.edu.ar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                <img src="../img/unjulog.png" class="img-fluid mr-3" style="max-width: 50px;">
+                Ingrese a la plataforma Unju Virtual
+            </a>
+            <a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <img src="../img/calendario.png" class="img-fluid mr-3" style="max-width: 50px;">
+                Ingreso a Calendario Académico
+            </a>
+            <a href="https://www.fi.unju.edu.ar/biblioteca_fi/index.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <img src="../img/bibloteca.png" class="img-fluid mr-3" style="max-width: 50px;">
+                Ingreso a Biblioteca
+            </a>
+            <a href="https://alumnos.unju.edu.ar/unju/" class="list-group-item list-group-item-action d-flex align-items-center">
+                <img src="../img/siuguarani.png" class="img-fluid mr-3" style="max-width: 50px;">
+                Ingreso a Siu Guarani
+            </a>
+			<br>
+        </div>
+    </div>
+				</div>
+					
+					
+				</div>
+			</div>
+		</aside>
+		
+	</body>
+</html>
