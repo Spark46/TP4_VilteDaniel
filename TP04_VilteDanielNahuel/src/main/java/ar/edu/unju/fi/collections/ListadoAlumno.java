@@ -1,12 +1,8 @@
 package ar.edu.unju.fi.collections;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import ar.edu.unju.fi.model.Alumno;
-
-public class AlumnoColecction {
-	
+public class ListadoAlumno {
 	public static List<Alumno> alumnos = new ArrayList<Alumno>();
 	public static List<Alumno> listarAlumnos() {
 		return alumnos;

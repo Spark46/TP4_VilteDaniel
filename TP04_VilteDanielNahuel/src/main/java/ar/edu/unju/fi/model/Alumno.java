@@ -1,7 +1,5 @@
 package ar.edu.unju.fi.model;
-
 import org.springframework.stereotype.Component;
-
 @Component
 public class Alumno {
 	private String dni;
@@ -9,25 +7,9 @@ public class Alumno {
 	private String apellido;
 	private String email;
 	private String telefono;
-	private String fecha_nac;
+	private String fechaNacimiento;
 	private String domicilio;
-	private String libreta;
-	
-	public Alumno() {
-		// TODO Auto-generated constructor stub
-	}
-	public Alumno(String dni, String nombre, String apellido, String email, String telefono, String fecha_nac,
-			String domicilio, String libreta) {
-		super();
-		this.dni = dni;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.email = email;
-		this.telefono = telefono;
-		this.fecha_nac = fecha_nac;
-		this.domicilio = domicilio;
-		this.libreta = libreta;
-	}
+	private String libretaUniversitaria;
 	public String getDni() {
 		return dni;
 	}
@@ -58,11 +40,11 @@ public class Alumno {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	public String getFecha_nac() {
-		return fecha_nac;
+	public String getFechaNacimiento() {
+		return fechaNacimiento;
 	}
-	public void setFecha_nac(String fecha_nac) {
-		this.fecha_nac = fecha_nac;
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 	public String getDomicilio() {
 		return domicilio;
@@ -70,12 +52,10 @@ public class Alumno {
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
-	public String getLibreta() {
-		return libreta;
+	public String getLibretaUniversitaria() {
+		return libretaUniversitaria;
 	}
-	public void setLibreta(String libreta) {
-		this.libreta = libreta;
+	public void setLibretaUniversitaria(String libretaUniversitaria) {
+		this.libretaUniversitaria = libretaUniversitaria;
 	}
-	
-	
 }

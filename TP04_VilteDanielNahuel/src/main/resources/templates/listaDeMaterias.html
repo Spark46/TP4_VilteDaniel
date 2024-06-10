@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Listado Materias</title>
+<style>
+    body {
+        background-color: #343a40;
+        color: #ffffff;
+        padding-top: 20px;
+    }
+    .btn {
+        margin-right: 5px;
+    }
+</style>
+</head>
+<body>
+    <header data-th-replace="~{layouts/header :: header}"></header>
+    <div class="container">
+        <h1 class="text-center">Listado Materias</h1>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Carga Horaria</th>
+                    <th scope="col">Modalidad</th>
+                    <th scope="col">Docente</th>
+                    <th scope="col">Carrera</th>
+                    <th scope="col">Edición</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-th-each="materia : ${listadoMateria}">
+                    <td data-th-text="${materia.codigo}"></td>
+                    <td data-th-text="${materia.nombre}"></td>
+                    <td data-th-text="${materia.curso}"></td>
+                    <td data-th-text="${materia.cantidadHoras}"></td>
+                    <td data-th-text="${materia.modalidad}"></td>
+                    <td data-th-text="${materia.docente.apellido}"></td>
+                    <td data-th-text="${materia.carrera.nombre}"></td>
+                    <td>
+                        <a data-th-href="@{'/modificarMateria/'+${materia.codigo}}" class="btn btn-warning">Modificar</a>
+                        <a data-th-href="@{'/borrarMateria/'+${materia.codigo}}" class="btn btn-danger">Borrar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

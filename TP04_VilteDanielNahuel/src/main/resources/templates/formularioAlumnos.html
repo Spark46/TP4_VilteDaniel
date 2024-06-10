@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Formulario Alumnos</title>
+<style>
+    body {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+    .form-control, .form-select {
+        background-color: #495057;
+        color: #ffffff;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    form {
+        max-width: 600px;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+    <header data-th-replace="~{layouts/header :: header}"></header>
+    <div class="container">
+        <h1 class="p-2">FORMULARIO ALUMNO</h1>
+        <form data-th-object="${nuevoAlumno}" data-th-action="${flag}?@{/modificarAlumno}:@{/guardarAlumno}" method="post" class="p-2">
+            <div class="mb-3">
+                <label for="dni" class="form-label">DNI</label> 
+                <input type="text" class="form-control" id="dni" data-th-field="*{dni}" data-th-readonly="${flag}" required>                
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" data-th-field="*{nombre}" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" data-th-field="*{apellido}" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" data-th-field="*{email}" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="text" class="form-control" id="telefono" data-th-field="*{telefono}" required>
+            </div>
+            <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" data-th-field="*{fechaNacimiento}" required>
+            </div>
+            <div class="mb-3">
+                <label for="domicilio" class="form-label">Domicilio</label>
+                <input type="text" class="form-control" id="domicilio" data-th-field="*{domicilio}" required>
+            </div>
+            <div class="mb-3">
+                <label for="lu" class="form-label">LU</label>
+                <input type="text" class="form-control" id="lu" data-th-field="*{libretaUniversitaria}" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Guardar Alumno</button>
+            </div>
+        </form>
+    </div>
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

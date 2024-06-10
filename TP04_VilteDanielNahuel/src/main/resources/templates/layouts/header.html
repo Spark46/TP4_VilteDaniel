@@ -9,7 +9,7 @@
 		<!-- HEADER -->
 		<section class="row m-4" data-th-fragment="header">
 			<div class="col-6 col-sm-6 col-md-12">
-			<header class="blue">
+			<header class="blue" style="background: white">
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-4 align-items-center">
 						<div class="container" style="background:white">
@@ -19,10 +19,10 @@
 					<section class="d-none d-md-block col-md-8 justify-content-center">
 						<div class="row">
 							<div class="col-8">
-								<h2>¡Universidad Publica y Gratuita! Mas de 52 Años de Educacion</h2>
+								<h2 class="text-black">¡Universidad Publica y Gratuita! Mas de 52 Años de Educacion</h2>
 							</div>
 							<div class="col-4">
-        <div class="row d-flex justify-content-between align-items-center">
+        <div class="row d-flex justify-content-between align-items-center" >
         	<div class="col-3">
             <a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" class="text-dark me-3" target="_blank">
                 <img src="../img/ytlog.jpg" class="img-fluid" alt="YouTube Logo" >
@@ -50,7 +50,8 @@
 				</div>
 			</header>
 			</div>
-			<div class="col-6 col-sm-6 col-md-12">
+			<!-- NAVBAR -->
+			<div class="col-6 col-sm-6 col-md-12" >
 				<nav class="navbar navbar-expand-lg border-bottom bg-body-tertiary justify-content-center align-items-center">
 					<div class="text-center">
 						<a class="navbar-brand text-center d-none d-md-block" href="/">Inicio</a>
@@ -62,27 +63,54 @@
 								<li class="nav-item">
 									<a class="nav-link active" aria-current="page" href="#">Acerca De</a>
 								</li>
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#">Noticias</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#footer">Contacto</a>
+								</li>
 								<li class="nav-item dropdown">
 									<button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 										Carreras
 									</button>
 									<ul class="dropdown-menu dropdown-menu-dark">
-										<li><a class="dropdown-item" href="#">Ingenieria en Minas</a></li>
-										<li><a class="dropdown-item" href="#">Ingenieria en Quimica</a></li>
-										<li><a class="dropdown-item" href="#">Ingenieria en Informatica</a></li>
-										<li><a class="dropdown-item" href="#">Analis Programador Universitario</a></li>
+										<li><a class="dropdown-item" href="/formularioCarreras">Formulario</a></li>
+										<li><a class="dropdown-item" href="/carreras">Listado</a></li>
 									</ul>
-									<li class="nav-item">
-										<a class="nav-link active" aria-current="page" href="#">Noticias</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link active" aria-current="page" href="#footer">Contacto</a>
-									</li>
+								</li>
+								<li class="nav-item dropdown">
+									<button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+										Alumnos
+									</button>
+									<ul class="dropdown-menu dropdown-menu-dark">
+										<li><a class="dropdown-item" href="/formularioAlumnos">Formulario</a></li>
+										<li><a class="dropdown-item" href="/alumnos">Listado</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+										Docentes
+									</button>
+									<ul class="dropdown-menu dropdown-menu-dark">
+										<li><a class="dropdown-item" href="/formularioDocentes">Formulario</a></li>
+										<li><a class="dropdown-item" href="/docentes">Listado</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+										Materias
+									</button>
+									<ul class="dropdown-menu dropdown-menu-dark">
+										<li><a class="dropdown-item" href="/formularioMaterias">Formulario</a></li>
+										<li><a class="dropdown-item" href="/materias">Listado</a></li>
+									</ul>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</div>
+			<!-- Fin del NAVBAR -->
 		</section>
 		<!-- ASIDE -->
 		<aside class="col-auto" th:fragment="aside">
