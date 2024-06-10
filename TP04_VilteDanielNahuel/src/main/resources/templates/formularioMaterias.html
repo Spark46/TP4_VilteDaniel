@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Formulario Materias</title>
+<style>
+    body {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+    .form-control, .form-select {
+        background-color: #495057;
+        color: #ffffff;
+    }
+    .card {
+        background-color: #495057;
+        border: none;
+    }
+    .card-header, .card-body {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+    <header data-th-replace="~{layouts/header :: header}"></header>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>Formulario Materia</h1>
+            </div>
+            <div class="card-body">
+                <form data-th-object="${nuevaMateria}" data-th-action="${flag}?@{/modificarMateria}:@{/guardarMateria}" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Código</label>
+                        <input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" data-th-readonly="${flag}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" data-th-field="*{nombre}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="curso" class="form-label">Curso</label>
+                        <input type="text" class="form-control" id="curso" data-th-field="*{curso}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="horas" class="form-label">Carga Horaria</label>
+                        <input type="number" class="form-control" id="horas" data-th-field="*{cantidadHoras}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalidad" class="form-label">Modalidad</label>
+                        <select id="modalidad" class="form-select" data-th-field="*{modalidad}">
+                            <option value="Virtual">Virtual</option>
+                            <option value="Presencial">Presencial</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="docente" class="form-label">Docente</label>
+                        <select id="docente" data-th-field="*{docente.legajo}" class="form-select" required>
+                            <option value="">Seleccionar Docente</option>
+                            <option data-th-each="d:${listadoDocente}" data-th-value="${d.legajo}" data-th-text="${d.apellido}"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carrera" class="form-label">Carrera</label>
+                        <select id="carrera" data-th-field="*{carrera.codigo}" class="form-select" required>
+                            <option value="">Seleccionar Carrera</option>
+                            <option data-th-each="c:${listadoCarrera}" data-th-value="${c.codigo}" data-th-text="${c.nombre}"></option>
+                        </select>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-block">Guardar Carrera</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
+

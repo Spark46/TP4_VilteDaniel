@@ -1,35 +1,14 @@
 package ar.edu.unju.fi.model;
-
 import org.springframework.stereotype.Component;
-
 @Component
 public class Materia {
 	private String codigo;
-    private String nombre;
-    private Integer curso;
-    private Integer cantidadHoras;
-    private String modalidad;
-    private Docente docente;
-    private Carrera carrera;
-    private boolean estado;
-    
-    public Materia() {
-    	
-    }
-	public Materia(String codigo, String nombre, Integer curso, Integer cantidadHoras, String modalidad, Docente docente,
-			Carrera carrera, boolean estado) {
-		super();
-		this.codigo = codigo;
-		this.nombre = nombre;
-		this.curso = curso;
-		this.cantidadHoras = cantidadHoras;
-		this.modalidad = modalidad;
-		this.docente = docente;
-		this.carrera = carrera;
-		this.estado = estado;
-	}
-	
-	
+	private String nombre;
+	private String curso;
+	private int cantidadHoras;
+	private Modalidad modalidad;
+	private Docente docente;
+	private Carrera carrera;
 	public String getCodigo() {
 		return codigo;
 	}
@@ -42,22 +21,22 @@ public class Materia {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Integer getCurso() {
+	public String getCurso() {
 		return curso;
 	}
-	public void setCurso(int curso) {
+	public void setCurso(String curso) {
 		this.curso = curso;
 	}
-	public Integer getCantidadHoras() {
+	public int getCantidadHoras() {
 		return cantidadHoras;
 	}
 	public void setCantidadHoras(int cantidadHoras) {
 		this.cantidadHoras = cantidadHoras;
 	}
-	public String getModalidad() {
+	public Modalidad getModalidad() {
 		return modalidad;
 	}
-	public void setModalidad(String modalidad) {
+	public void setModalidad(Modalidad modalidad) {
 		this.modalidad = modalidad;
 	}
 	public Docente getDocente() {
@@ -72,14 +51,4 @@ public class Materia {
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
-	public boolean isEstado() {
-		return estado;
-	}
-	public void setEstado(boolean estado) {
-		this.estado = estado;
-	}
-	
-	
-
-    
 }

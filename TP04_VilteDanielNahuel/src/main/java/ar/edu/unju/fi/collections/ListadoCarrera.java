@@ -2,7 +2,7 @@ package ar.edu.unju.fi.collections;
 import java.util.ArrayList;
 import java.util.List;
 import ar.edu.unju.fi.model.Carrera;
-public class CarreraCollection {
+public class ListadoCarrera {
 	public static List<Carrera> carreras = new ArrayList<Carrera>();//Aquellas carreras con estado falso se consideran eliminadas
 	public static List<Carrera> carrerasDisponibles = new ArrayList<Carrera>();
 	public static List<Carrera> listarCarreras() {

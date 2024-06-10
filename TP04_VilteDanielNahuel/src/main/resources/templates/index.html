@@ -1,117 +1,114 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TP 4: Pagina de Facultad</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>	
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP 4: Pagina de Facultad</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
-	<body style="background-color:#D2D2D2">
-		<div class="mx-0 mt-4">
-			<div class="row">
-				<!-- ASIDE  -->
-				<aside data-th-replace="~{/layouts/header :: aside}"></aside>
-				<!-- ------ -->
-		<div class="col ps-0"style="background-color:white">
-		
-		<!--  HEADER  -->
-		<section data-th-replace="~{/layouts/header :: header}"></section>		
-		<!-- -------- -->
-		<!-- MAIN -->
-		<main class="col" style="background:white">
-			<div class="border border-5 border-primary-subtle" style="background:#00C4D4">
-				<div class="row my-3 mx-0">
-					<div class="col-10">
-						<h2>| Bienvenido a la Facultad de Ingenieria</h1>
-						<p>Entrar a la facultad de ingeniería es el primer paso hacia un futuro lleno de desafíos y oportunidades emocionantes, donde cada día se abre la puerta a la innovación y al aprendizaje continuo, preparándote para ser parte de soluciones creativas que impactan el mundo.</p>
-					</div>
-					<div class="col-2 text-center"><img src="../img/unjulog.png" class="img-fluid" alt="Unju Logo" style="width: 110px; height: auto;"></div>
-				</div>
-			</div>
-			<section class="row">
-				<div class="col-5 m-4">
-					<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="../img/inginfolog.jpg" class="d-block w-100" alt="...">
+<body style="background-color:#D2D2D2">
+    <div class="mx-0 mt-4">
+        <div class="row">
+            <!-- ASIDE  -->
+            <aside data-th-replace="~{/layouts/header :: aside}"></aside>
+            <!-- ------ -->
+            <div class="col ps-0" style="background-color:white">
+                <!--  HEADER  -->
+                <section data-th-replace="~{/layouts/header :: header}"></section>       
+                <!-- -------- -->
+                <!-- MAIN -->
+                <main class="col" style="background:white">
+                    <div class="border border-5 border-primary-subtle" style="background:#00C4D4">
+                        <div class="row my-3 mx-0">
+                            <div class="col-10">
+                                <h2>| Bienvenido a la Facultad de Ingenieria</h2>
+                                <p>Entrar a la facultad de ingeniería es el primer paso hacia un futuro lleno de desafíos y oportunidades emocionantes, donde cada día se abre la puerta a la innovación y al aprendizaje continuo, preparándote para ser parte de soluciones creativas que impactan el mundo.</p>
+                            </div>
+                            <div class="col-2 text-center">
+                                <img src="../img/unjulog.png" class="img-fluid" alt="Unju Logo" style="width: 110px; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <section class="row">
+                        <div class="col-5 m-4">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                        <img src="../img/inginfolog.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="../img/ingquimicalog.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/ingminaslog.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/anlprgunilog.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6 text-center justify-content-center m-auto">
+                            <p>
+                                ¡Descubre tu camino hacia el futuro con nuestras emocionantes carreras de ingeniería! Desde la vanguardia de la tecnología en Ingeniería Informática hasta los profundos cimientos de la Tierra en Ingeniería de Minas, pasando por la fascinante alquimia de la Química y la precisión del análisis en la Programación Universitaria, nuestra oferta académica te prepara para desafiar los límites y liderar en un mundo impulsado por la innovación. ¡Únete a nosotros y da forma al mañana hoy mismo!
+                            </p>
+                        </div>
+                    </section>
+                    <section class="row m-4">
+                        <h2>Noticias del Dia: </h2>
+                        <div class="col-3 px-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../img/not1.jpg" class="card-img-top w-50 m-auto" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">La inscripción al curso se realiza completando el siguiente formulario: ----. Una vez hecha la inscripción se debe realizar el pago mediante transferencia al siguiente alias: COOPERADORA.FACULTAD (todo con mayúsculas y separadas por un punto).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 px-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../img/not2.png" class="card-img-top w-50 m-auto" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">El Comité del CADI-CAEDI 2024 invita a estudiantes a participar en "IngeniaVoz", donde podrán realizar presentaciones breves sobre temas de ingeniería. Se ofrecerá entrenamiento previo al evento, que se realizará entre junio y agosto de forma remota. Inscripciones abiertas hasta el 06/06/2024. Videconferencia informativa el 24/05 a las 16:30hs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 px-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../img/not3.jpg" class="card-img-top w-50 m-auto" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text"> ¡52° Aniversario de nuestra querida Facultad de Ingeniería!
+                                    Y lo festeja con una riquísima chocolatada, mañana viernes 24 de mayo a las 10.00 hs en el patio de Decanato 
+                                    ¡Quedan todos invitados!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 px-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../img/not4.jpg" class="card-img-top w-50 m-auto" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text"> El Comité Organizador del "Concurso Nacional a las Mejores Tesis de Ingeniería" de INVAP invita a particpar de la 2da la edición del concurso.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="../img/ingquimicalog.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../img/ingminaslog.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../img/anlprgunilog.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-					</div>
-				</div>
-				<div class="col-6 text-center justify-content-center m-auto">
-					<p>
-						¡Descubre tu camino hacia el futuro con nuestras emocionantes carreras de ingeniería! Desde la vanguardia de la tecnología en Ingeniería Informática hasta los profundos cimientos de la Tierra en Ingeniería de Minas, pasando por la fascinante alquimia de la Química y la precisión del análisis en la Programación Universitaria, nuestra oferta académica te prepara para desafiar los límites y liderar en un mundo impulsado por la innovación. ¡Únete a nosotros y da forma al mañana hoy mismo!
-					</p>
-				</div>
-			</section>
-			<section class="row m-4">
-			<h2>Noticias del Dia: </h2>
-				<div class="col-3 px-2">
-					<div class="card " style="width: 18rem;">
-							<img src="../img/not1.jpg" class="card-img-top w-50 m-auto" alt="...">
-							<div class="card-body">
-								<p class="card-text">La inscripción al curso se realiza completando el siguiente formulario: ----. Una vez hecha la inscripción se debe realizar el pago mediante transferencia al siguiente alias: COOPERADORA.FACULTAD (todo con mayúsculas y separadas por un punto).</p>
-							</div>
-					</div>
-				</div>
-				<div class="col-3 px-2">
-					<div class="card " style="width: 18rem;">
-							<img src="../img/not2.png" class="card-img-top w-50 m-auto" alt="...">
-							<div class="card-body">
-								<p class="card-text">El Comité del CADI-CAEDI 2024 invita a estudiantes a participar en "IngeniaVoz", donde podrán realizar presentaciones breves sobre temas de ingeniería. Se ofrecerá entrenamiento previo al evento, que se realizará entre junio y agosto de forma remota. Inscripciones abiertas hasta el 06/06/2024. Videconferencia informativa el 24/05 a las 16:30hs.</p>
-							</div>
-					</div>
-				</div>
-				<div class="col-3 px-2">
-					<div class="card " style="width: 18rem;">
-							<img src="../img/not3.jpg" class="card-img-top w-50 m-auto" alt="...">
-							<div class="card-body">
-								<p class="card-text"> ¡52° Aniversario de nuestra querida Facultad de Ingeniería!
-Y lo festeja con una riquísima chocolatada, mañana viernes 24 de mayo a las 10.00 hs en el patio de Decanato 
-¡Quedan todos invitados!
-
-								</p>
-							</div>
-					</div>
-				</div>
-				<div class="col-3 px-2">
-					<div class="card " style="width: 18rem;">
-							<img src="../img/not4.jpg" class="card-img-top w-50 m-auto" alt="...">
-							<div class="card-body">
-								<p class="card-text"> El Comité Organizador del "Concurso Nacional a las Mejores Tesis de Ingeniería" de INVAP invita a particpar de la 2da la edición del concurso.
-								</p>
-							</div>
-					</div>
-				</div>
-				</section>
-			</main>
-			</div>
-		</div>
-		</div>
-		<!-- ----- -->
-		<!-- Footer -->
-		<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
-		<!-- ------ -->
-		
-		<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-	</body>
+    <!-- ----- -->
+    <!-- Footer -->
+    <footer data-th-replace="~{/layouts/footer :: footer}"></footer>
+    <!-- ------ -->
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
 </html>
